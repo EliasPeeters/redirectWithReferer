@@ -11,17 +11,58 @@
 
         body {
             background-color: rgb(240, 240, 240);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        #mainContent {
+            margin-top: 50px;
+            background-color: white;
+            padding: 20px;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input {
+            border-radius: 5px;
+            padding: 8px;
+            border:1px solid #cccccc;
+            border-color: rgb(201, 201, 201);
+            width: calc(100% - 16px);
+            font-size: 16px;
+        }
+
+        input:focus {
+            outline: none !important;    
+        }
+
+        button {
+            background-color: rgb(202, 43, 42);
+            border: none;
+            color: white;
+            width: 100%;
+            padding: 8px;
+            border-radius: 8px;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
-    <h1>Redirect mit Referer</h1>
-    <form id="redirectForm">
-        <label for="url">URL:</label>
-        <input type="text" id="url" name="url" required>
-        <br><br>
-        <button type="button" onclick="redirect()">Redirect</button>
-    </form>
+        <div id="mainContent">
+            <h1>Redirect mit Referer</h1>
+            <form id="redirectForm">
+            
+                <input placeholder="Url" type="text" id="url" name="url" required>
+                <br><br>
+                <button type="button" onclick="redirect()">Redirect</button>
+            </form>
+        </div>
 
     <script>
         function redirect() {
