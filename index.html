@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirect mit Referer</title>
+    <style>
+        * {
+            font-family: "Roboto", sans-serif;
+        }
+
+        body {
+            background-color: rgb(240, 240, 240);
+        }
+    </style>
 </head>
 <body>
     <h1>Redirect mit Referer</h1>
     <form id="redirectForm">
         <label for="url">URL:</label>
         <input type="text" id="url" name="url" required>
-        <br><br>
-        <label for="referer">Referer:</label>
-        <select id="referer" name="referer">
-            <option value="https://example.com">https://example.com</option>
-            <option value="https://otto.de">https://otto.de</option>
-            <option value="https://google.com">https://google.com</option>
-        </select>
         <br><br>
         <button type="button" onclick="redirect()">Redirect</button>
     </form>
